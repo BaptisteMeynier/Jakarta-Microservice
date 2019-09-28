@@ -1,4 +1,4 @@
-package org.keywer.jakarta.simple.microservice.rest.param;
+package org.keywer.jakarta.microservice.rest.param;
 
 
 import javax.ws.rs.QueryParam;

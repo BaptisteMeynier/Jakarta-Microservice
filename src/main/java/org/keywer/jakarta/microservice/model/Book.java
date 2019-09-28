@@ -1,7 +1,6 @@
-package org.keywer.jakarta.simple.microservice.model;
+package org.keywer.jakarta.microservice.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -10,10 +9,15 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "BOOK")
+@NamedQueries({
+        @NamedQuery(name="Book.findByTitle",query="SELECT b FROM Book b WHERE b.title = :title"),
+        @NamedQuery(name="Book.findByAuthor",query="SELECT b FROM Book b JOIN Author a WHERE a.name = :name OR a.firstName=:firstName")
+}
+)
 public class Book {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
     private String title;

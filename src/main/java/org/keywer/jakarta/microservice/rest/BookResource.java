@@ -1,13 +1,11 @@
-package org.keywer.jakarta.simple.microservice.rest;
+package org.keywer.jakarta.microservice.rest;
 
-import org.keywer.jakarta.simple.microservice.model.Author;
-import org.keywer.jakarta.simple.microservice.model.Book;
-import org.keywer.jakarta.simple.microservice.repository.Repository;
-import org.keywer.jakarta.simple.microservice.rest.param.AuthorParam;
+import org.keywer.jakarta.microservice.model.Book;
+import org.keywer.jakarta.microservice.repository.Repository;
+import org.keywer.jakarta.microservice.rest.param.AuthorParam;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.validation.constraints.Past;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

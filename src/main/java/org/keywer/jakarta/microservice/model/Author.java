@@ -1,4 +1,4 @@
-package org.keywer.jakarta.simple.microservice.model;
+package org.keywer.jakarta.microservice.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -11,7 +11,7 @@ import java.util.*;
 public class Author {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
     private String name;
