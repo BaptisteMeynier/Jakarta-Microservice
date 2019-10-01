@@ -1,4 +1,4 @@
-# Simple Jakarta-ee MicroService
+# Jakarta-ee Microservice
 
 ## Introduction
 ### Watch forward
