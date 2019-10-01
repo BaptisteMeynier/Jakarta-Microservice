@@ -14,4 +14,23 @@
 
     <variable name="io_openliberty_guides_system_inMaintenance" value="false"/>
 
+    <!-- H2 Library Configuration -->
+    <library id="H2JDBCLib">
+        <fileset dir="${server.config.dir}/lib" includes="h2-1.4.199.jar"/>
+    </library>
+
+    <!-- Datasource Configuration -->
+    <dataSource id="h2test" jndiName="comp/DefaultDataSource">
+        <!-- Define the DataSource class names on the <jdbcDriver> element -->
+        <jdbcDriver
+                javax.sql.XADataSource="org.h2.jdbcx.JdbcDataSource"
+                javax.sql.ConnectionPoolDataSource="org.h2.jdbcx.JdbcDataSource"
+                javax.sql.DataSource="org.h2.jdbcx.JdbcDataSource"
+                libraryRef="H2JDBCLib"/>
+        <!-- set the connection URL on the <properties> element.
+             this corresponds to the setURL() method on H2's JdbcDataSource class.
+             you may also list any properties here that have a corresponding setXXX method on H2's JdbcDataSource class -->
+        <properties URL="jdbc:h2:mem:testdb"/>
+    </dataSource>
+
 </server>

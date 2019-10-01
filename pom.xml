@@ -202,12 +202,6 @@
                     <type>esa</type>
                     <scope>provided</scope>
                 </dependency>
-                <!--dependency>
-                    <groupId>io.openliberty.features</groupId>
-                    <artifactId>com.ibm.websphere.appserver.jta-1.2</artifactId>
-                    <type>esa</type>
-                    <scope>provided</scope>
-                </dependency-->
             </dependencies>
             <build>
                 <plugins>
