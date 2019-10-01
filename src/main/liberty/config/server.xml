@@ -20,7 +20,7 @@
     </library>
 
     <!-- Datasource Configuration -->
-    <dataSource id="h2test" jndiName="comp/DefaultDataSource">
+    <dataSource id="h2test" jndiName="jdbc/bookjpadatasource">
         <!-- Define the DataSource class names on the <jdbcDriver> element -->
         <jdbcDriver
                 javax.sql.XADataSource="org.h2.jdbcx.JdbcDataSource"

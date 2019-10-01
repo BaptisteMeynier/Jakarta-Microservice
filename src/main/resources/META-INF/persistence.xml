@@ -2,7 +2,7 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="BOOK_PU" transaction-type="JTA">
         <!--class>com.test.jpa.Student</class-->
-        <jta-data-source>comp/DefaultDataSource</jta-data-source>
+        <jta-data-source>jdbc/bookjpadatasource</jta-data-source>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" />
